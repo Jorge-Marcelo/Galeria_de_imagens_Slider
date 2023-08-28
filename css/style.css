@@ -1,0 +1,162 @@
+/*Google Fonts*/
+/*Roboto Sans Serif*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+*{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+transition: all 0.5s ease
+}
+
+body{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+background-color: rgb(34, 34, 34);
+}
+
+h1{
+font-family: "Roboto Mono", monospace;
+font-size: 1.5em;
+text-align: center;
+margin: 10px;
+text-transform: uppercase;
+font-weight: 900;
+color: rgb(255, 255, 255);
+}
+
+
+section{
+width: 550px;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+background-color: orangered;
+margin-top: 30px;
+border: 3px solid white;
+}
+.slide{
+border: 3px solid white;
+margin-top: 10px;
+}
+
+.proximo, .anterior{
+background-color: white;
+width: 50px;
+height: 50px;
+border-radius: 50%;
+border: 3px solid black;
+font-size: 2em;
+font-weight: 900;
+position: absolute;
+top: 45%;
+cursor: pointer;
+}
+.anterior:hover{
+background-color: orange;
+}
+.proximo:hover{
+background-color: orange;
+}
+.proximo{
+margin-left: 490px;
+}
+.anterior{
+margin-left: -490px;
+}
+
+
+article{
+display: grid;
+grid-template-columns: repeat(6, 80px);
+gap: 10px;
+}
+.miniaturas{
+width: 75px;
+height: 75px;
+margin: 5px;
+border: 2px solid white;
+cursor: pointer;
+}
+img.miniaturas{
+opacity: 0.5;
+}
+img.active,.miniaturas{
+opacity: 1;
+}
+img,.miniaturas:hover{
+opacity: 1;
+}
+
+/*Classes de redes sociais*/
+.social{
+margin: 0 3px;
+width: 50px; 
+height: 50px; 
+border-radius: 100%;
+cursor: pointer;
+border: 2px solid rgb(0, 0, 0);
+background-color: white;
+}
+
+.social:hover{
+background-image: linear-gradient(120deg, red, orange, rgb(255, 238, 0));
+border: 2px solid white;
+}
+
+
+@media(max-width: 560px){
+section{
+width: 400px;
+}
+.slide{
+width: 350px;
+}
+article{
+grid-template-columns: repeat(4, 80px);
+}
+
+.proximo{
+margin-left: 350px;
+}
+.anterior{
+margin-left: -350px;
+}
+
+.proximo, .anterior{
+top: 36%;
+
+}
+}
+
+@media(max-width:  420px){
+section{
+width: 300px;
+}
+.slide{
+width: 250px;
+}
+
+article{
+grid-template-columns: repeat(2, 80px);
+}
+
+.proximo, .anterior{
+width: 40px;
+height: 40px;
+font-size: 1.5em;
+top: 36%;
+}
+
+.proximo{
+margin-left: 250px;
+}
+.anterior{
+margin-left: -250px;
+}
+}
+
